@@ -1,4 +1,4 @@
-# 🌌 Next-Gen Developer Portfolio 🚀
+# 🌌 Next-Gen Developer Portfolio 
 
 🔥 **A futuristic, award-winning, and fully responsive developer portfolio** built with **Next.js 14**, **Tailwind CSS**, and **Three.js**. This is not just a portfolio, it’s an **immersive 3D experience** to showcase your projects, skills, and personality like never before.
 
