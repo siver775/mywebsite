@@ -16,8 +16,7 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">About Me</h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            I'm a creative technologist who bridges the gap between design and development, crafting digital experiences
-            that push the boundaries of what's possible on the web.
+            I'm a senior full-stack engineer with 12 years of experience specializing in Next.js, Node.js, Django, and Rust, I step in to clean up technical debt, integrate your third-party systems, and improve overall application performance without slowing down development.
           </p>
         </motion.div>
 

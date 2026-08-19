@@ -34,7 +34,7 @@
 
 ## 🚀 Demo
 
-🌐 [**View Live Demo**](https://s10-modern-portfolio.vercel.app)
+🌐 [**View Live Demo**](https://siver775.github.io/mywebsite/)
 
 ---
 
@@ -51,7 +51,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/senotron/modern-portfolio.git
+git clone https://github.com/siver775/mywebsite.git
 
 # Go to the project directory
 cd modern-portfolio

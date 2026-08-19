@@ -191,18 +191,18 @@ export default function BlogSection() {
                       <div
                         key={i}
                         className={`w-3 h-3 rounded-sm ${
-                          Math.random() > 0.7
+                          Math.random() > 0.9
                             ? "bg-green-400"
-                            : Math.random() > 0.5
+                            : Math.random() > 0.7
                               ? "bg-green-400/60"
-                              : Math.random() > 0.3
+                              : Math.random() > 0.5
                                 ? "bg-green-400/30"
                                 : "bg-white/10"
                         }`}
                       />
                     ))}
                   </div>
-                  <p className="text-white/60 text-sm mt-4">1,247 contributions in the last year</p>
+                  <p className="text-white/60 text-sm mt-4">930 contributions in the last year</p>
                 </CardContent>
               </Card>
             </motion.div>

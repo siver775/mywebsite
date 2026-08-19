@@ -9,6 +9,7 @@ const filters = [
   { id: "backend", label: "Backend", icon: "⚙️" },
   { id: "ai", label: "AI/ML", icon: "🤖" },
   { id: "opensource", label: "Open Source", icon: "🔓" },
+  { id: "private", label: "Private", icon: "🔒"},
 ]
 
 interface ProjectFilterProps {

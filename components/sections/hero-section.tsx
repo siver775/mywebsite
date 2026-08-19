@@ -64,7 +64,7 @@ export default function HeroSection() {
             transition={{ delay: 0.8, duration: 1 }}
             className="text-6xl md:text-8xl font-bold mb-6 liquid-gradient font-sora"
           >
-            John Doe
+            Andrew Jordan
           </motion.h1>
 
           {/* Subheading */}
@@ -78,7 +78,7 @@ export default function HeroSection() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
@@ -98,7 +98,7 @@ export default function HeroSection() {
             >
               <Download className="mr-2 h-5 w-5" />📄 Download Resume
             </Button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
 

@@ -58,6 +58,18 @@ const projectsData = [
     demo: "https://demo.com",
     image: "/placeholder.svg?height=200&width=300",
   },
+  {
+    id: 5,
+    name: "Session replay and incident tracking platform",
+    category: "private",
+    position: [1, -1, 2],
+    color: "#e26751",
+    description: "Session replay and incident tracking platform",
+    technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS"],
+    github: "https://github.com",
+    demo: "https://demo.com",
+    image: "/placeholder.svg?height=200&width=300",
+  },
 ]
 
 function ProjectPlanet({ project, onClick, isSelected }: any) {

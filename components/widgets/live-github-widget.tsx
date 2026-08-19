@@ -15,9 +15,9 @@ interface GitHubData {
 
 export default function LiveGitHubWidget() {
   const [githubData, setGithubData] = useState<GitHubData>({
-    commits: 1247,
+    commits: 546,
     stars: 89,
-    repos: 42,
+    repos: 15,
     lastCommit: "2 hours ago",
   })
 
@@ -27,7 +27,7 @@ export default function LiveGitHubWidget() {
       setGithubData((prev) => ({
         ...prev,
         commits: prev.commits + Math.floor(Math.random() * 3),
-        lastCommit: Math.random() > 0.5 ? "Just now" : "1 hour ago",
+        lastCommit: Math.random() > 0.5 ? "Just now" : "1 day ago",
       }))
     }, 30000) // Update every 30 seconds
 
