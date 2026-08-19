@@ -44,7 +44,7 @@ const timelineData = [
     company: "SendGrid, Inc.",
     location: "San Francisco, CA (Relocated to FL in 2016)",
     description: "Engineered live user dashboards and API delivery tools using Ruby on Rails, Backbone.js, and AWS cloud infrastructure.",
-    technologies: ["CI/CDt", "Docker", "Ruby on Rails", "AWS"],
+    technologies: ["CI/CD", "Docker", "Ruby on Rails", "AWS"],
     achievements: ["Launched 5 products", "Improved UX metrics by 60%", "Built design system"],
   },
 ]
