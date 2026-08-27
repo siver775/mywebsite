@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function HolographicAvatar() {
   return (
     <div className="relative w-32 h-32 mx-auto mb-8">
@@ -28,7 +30,7 @@ export default function HolographicAvatar() {
         {/* Placeholder Avatar - Replace with actual image */}
         <div className="w-full h-full bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full flex items-center justify-center">
           {/* <div className="text-4xl">👨‍💻</div> */}
-          <img src="/profile.png" alt="Profile" />
+          <img src="/profile.png" alt={`${basePath}/profile.png`} />
         </div>
       </motion.div>
 
