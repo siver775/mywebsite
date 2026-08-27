@@ -27,7 +27,8 @@ export default function HolographicAvatar() {
       >
         {/* Placeholder Avatar - Replace with actual image */}
         <div className="w-full h-full bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full flex items-center justify-center">
-          <div className="text-4xl">👨‍💻</div>
+          {/* <div className="text-4xl">👨‍💻</div> */}
+          <img src="/profile.png" alt="Profile" />
         </div>
       </motion.div>
 
