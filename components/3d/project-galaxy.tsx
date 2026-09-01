@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { OrbitControls, Text } from "@react-three/drei"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTheme } from "next-themes"
 import type * as THREE from "three"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
@@ -74,6 +75,8 @@ const projectsData = [
 
 function ProjectPlanet({ project, onClick, isSelected }: any) {
   const meshRef = useRef<THREE.Mesh>(null)
+  const { theme } = useTheme()
+  const labelColor = theme === "light" ? "#0f172a" : "#ffffff"
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -110,7 +113,7 @@ function ProjectPlanet({ project, onClick, isSelected }: any) {
         <meshBasicMaterial color={project.color} transparent opacity={0.2} />
       </mesh>
 
-      <Text position={[0, -0.8, 0]} fontSize={0.15} color="white" anchorX="center" anchorY="middle">
+      <Text position={[0, -0.8, 0]} fontSize={0.15} color={labelColor} anchorX="center" anchorY="middle">
         {project.name}
       </Text>
     </group>
@@ -128,7 +131,7 @@ function FallbackProjectGrid({ projects, onProjectClick }: any) {
           onClick={() => onProjectClick(project)}
           className="cursor-pointer"
         >
-          <Card className="glass-morphism border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+          <Card className="glass-morphism border-border/50 hover:border-cyan-400/50 transition-all duration-300">
             <CardContent className="p-4">
               <div
                 className="w-full h-32 rounded-lg mb-4 flex items-center justify-center text-4xl"
@@ -136,8 +139,8 @@ function FallbackProjectGrid({ projects, onProjectClick }: any) {
               >
                 🚀
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">{project.name}</h3>
-              <p className="text-white/70 text-sm line-clamp-2">{project.description}</p>
+              <h3 className="text-lg font-bold text-foreground mb-2">{project.name}</h3>
+              <p className="text-muted-foreground text-sm line-clamp-2">{project.description}</p>
             </CardContent>
           </Card>
         </motion.div>
@@ -236,13 +239,13 @@ export default function ProjectGalaxy({ selectedFilter }: ProjectGalaxyProps) {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{selectedProject.name}</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">{selectedProject.name}</h3>
 
-                  <p className="text-white/80 mb-4">{selectedProject.description}</p>
+                  <p className="text-muted-foreground mb-4">{selectedProject.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {selectedProject.technologies.map((tech: string) => (
-                      <span key={tech} className="px-2 py-1 bg-white/10 rounded text-sm text-white">
+                      <span key={tech} className="px-2 py-1 bg-muted rounded text-sm text-foreground">
                         {tech}
                       </span>
                     ))}

@@ -15,7 +15,7 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">About Me</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             I'm a senior full-stack engineer with 12 years of experience specializing in Next.js, Node.js, Django, and Rust, I step in to clean up technical debt, integrate your third-party systems, and improve overall application performance without slowing down development.
           </p>
         </motion.div>
@@ -31,14 +31,14 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Dynamic Widgets */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <motion.div
+        <div className="grid md:grid-cols-1 gap-8">
+          {/* <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <LiveGitHubWidget />
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}

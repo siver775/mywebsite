@@ -14,9 +14,9 @@ const learningData = [
 
 export default function CurrentlyLearningWidget() {
   return (
-    <Card className="glass-morphism border-white/20 hover:border-purple-400/50 transition-all duration-300">
+    <Card className="glass-morphism border-border/50 hover:border-purple-400/50 transition-all duration-300">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-white">
+        <CardTitle className="flex items-center gap-2 text-foreground">
           <BookOpen className="h-5 w-5 text-purple-400" />
           Currently Learning
         </CardTitle>
@@ -33,23 +33,23 @@ export default function CurrentlyLearningWidget() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="text-lg">{item.icon}</span>
-                <span className="text-white/80">{item.name}</span>
+                <span className="text-foreground/80">{item.name}</span>
               </div>
-              <span className="text-sm text-white/60">{item.progress}%</span>
+              <span className="text-sm text-muted-foreground">{item.progress}%</span>
             </div>
-            <Progress value={item.progress} className="h-2 bg-white/10" />
+            <Progress value={item.progress} className="h-2 bg-muted" />
           </motion.div>
         ))}
 
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="mt-6 p-3 rounded-lg bg-gradient-to-r from-purple-400/20 to-cyan-400/20 border border-white/10"
+          className="mt-6 p-3 rounded-lg bg-gradient-to-r from-purple-400/20 to-cyan-400/20 border border-border/60"
         >
           <div className="flex items-center gap-2 mb-2">
             <Zap className="h-4 w-4 text-yellow-400" />
-            <span className="text-white font-semibold">Next Up:</span>
+            <span className="text-foreground font-semibold">Next Up:</span>
           </div>
-          <div className="text-white/80">Exploring quantum computing applications in web development</div>
+          <div className="text-foreground/80">Exploring quantum computing applications in web development</div>
         </motion.div>
       </CardContent>
     </Card>

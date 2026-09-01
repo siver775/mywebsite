@@ -55,7 +55,7 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">Let's Connect</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
           </p>
         </motion.div>
@@ -67,9 +67,9 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <Card className="glass-morphism border-white/20">
+            <Card className="glass-morphism border-border/50">
               <CardHeader>
-                <CardTitle className="text-white flex items-center gap-2">💬 Send a Message</CardTitle>
+                <CardTitle className="text-foreground flex items-center gap-2">💬 Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -78,7 +78,7 @@ export default function ContactSection() {
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="glass-morphism border-white/20 text-white placeholder:text-white/50"
+                      className="glass-morphism border-border/50 text-foreground placeholder:text-muted-foreground"
                       required
                     />
                   </div>
@@ -89,7 +89,7 @@ export default function ContactSection() {
                       placeholder="Your Email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="glass-morphism border-white/20 text-white placeholder:text-white/50"
+                      className="glass-morphism border-border/50 text-foreground placeholder:text-muted-foreground"
                       required
                     />
                   </div>
@@ -99,7 +99,7 @@ export default function ContactSection() {
                       placeholder="Your Message"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="glass-morphism border-white/20 text-white placeholder:text-white/50 min-h-32"
+                      className="glass-morphism border-border/50 text-foreground placeholder:text-muted-foreground min-h-32"
                       required
                     />
 
@@ -109,7 +109,7 @@ export default function ContactSection() {
                       size="sm"
                       onClick={toggleRecording}
                       className={`absolute top-2 right-2 ${
-                        isRecording ? "text-red-400 animate-pulse" : "text-white/60"
+                        isRecording ? "text-red-400 animate-pulse" : "text-muted-foreground"
                       }`}
                     >
                       {isRecording ? <Mic className="h-4 w-4" /> : <MicOff className="h-4 w-4" />}
@@ -160,18 +160,18 @@ export default function ContactSection() {
             </Card> */}
 
             {/* AI Assistant */}
-            <Card className="glass-morphism border-white/20">
+            <Card className="glass-morphism border-border/50">
               <CardHeader>
-                <CardTitle className="text-white flex items-center gap-2">🤖 AI Assistant</CardTitle>
+                <CardTitle className="text-foreground flex items-center gap-2">🤖 AI Assistant</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 flex items-center justify-center text-sm">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400 flex items-center justify-center text-sm text-black font-bold">
                       AI
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/80 text-sm">
+                      <p className="text-muted-foreground text-sm">
                         Hi! I'm Andrew's AI assistant. I can help answer questions about his experience, schedule
                         meetings, or provide project details. What would you like to know?
                       </p>
@@ -179,13 +179,13 @@ export default function ContactSection() {
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary" className="bg-white/10 text-white cursor-pointer hover:bg-white/20">
+                    <Badge variant="secondary" className="bg-muted text-foreground cursor-pointer hover:bg-accent">
                       Tell me about Andrew's experience
                     </Badge>
-                    <Badge variant="secondary" className="bg-white/10 text-white cursor-pointer hover:bg-white/20">
+                    <Badge variant="secondary" className="bg-muted text-foreground cursor-pointer hover:bg-accent">
                       What technologies does he use?
                     </Badge>
-                    <Badge variant="secondary" className="bg-white/10 text-white cursor-pointer hover:bg-white/20">
+                    <Badge variant="secondary" className="bg-muted text-foreground cursor-pointer hover:bg-accent">
                       Schedule a meeting
                     </Badge>
                   </div>
@@ -194,9 +194,9 @@ export default function ContactSection() {
             </Card>
 
             {/* Social Links */}
-            <Card className="glass-morphism border-white/20">
+            <Card className="glass-morphism border-border/50">
               <CardHeader>
-                <CardTitle className="text-white flex items-center gap-2">🌐 Connect Online</CardTitle>
+                <CardTitle className="text-foreground flex items-center gap-2">🌐 Connect Online</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
@@ -211,7 +211,7 @@ export default function ContactSection() {
                       href="#"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`flex items-center gap-2 p-3 rounded-lg glass-morphism border border-white/10 text-white/80 transition-colors ${social.color}`}
+                      className={`flex items-center gap-2 p-3 rounded-lg glass-morphism border border-border/40 text-foreground/80 transition-colors ${social.color}`}
                     >
                       <span className="text-lg">{social.icon}</span>
                       <span>{social.name}</span>
@@ -228,14 +228,14 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-20 pt-8 border-t border-white/10 text-center"
+          className="mt-20 pt-8 border-t border-border/50 text-center"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-white/60">© 2026 Andrew Jordan. Crafted with ❤️ and cutting-edge tech.</div>
+            <div className="text-muted-foreground">© 2026 Andrew Jordan. Crafted with ❤️ and cutting-edge tech.</div>
 
             <div className="flex items-center gap-4">
               <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse" />
-              <span className="text-white/40 text-sm">Powered by Next.js & Three.js</span>
+              <span className="text-muted-foreground text-sm">Powered by Next.js & Three.js</span>
             </div>
           </div>
         </motion.footer>

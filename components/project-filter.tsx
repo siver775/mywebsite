@@ -25,10 +25,10 @@ export default function ProjectFilter({ selectedFilter, onFilterChange }: Projec
           <Button
             variant={selectedFilter === filter.id ? "default" : "outline"}
             onClick={() => onFilterChange(filter.id)}
-            className={`glass-morphism border-white/20 ${
+            className={`glass-morphism border-border/50 ${
               selectedFilter === filter.id
                 ? "bg-cyan-400/20 border-cyan-400 text-cyan-400"
-                : "hover:border-cyan-400/50 text-white"
+                : "hover:border-cyan-400/50 text-foreground"
             }`}
           >
             <span className="mr-2">{filter.icon}</span>

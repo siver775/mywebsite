@@ -18,7 +18,7 @@ export default function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 liquid-gradient font-sora">Project Galaxy</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Explore my projects as planets in a 3D universe. Click on any planet to dive deeper into the project
             details.
           </p>

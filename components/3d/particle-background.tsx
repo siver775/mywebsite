@@ -3,10 +3,12 @@
 import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Points, PointMaterial } from "@react-three/drei"
+import { useTheme } from "next-themes"
 import type * as THREE from "three"
 
 function ParticleField() {
   const ref = useRef<THREE.Points>(null)
+  const { theme } = useTheme()
   const particlesCount = 1000 // Reduced for better performance
 
   // Generate random positions for particles
@@ -22,15 +24,19 @@ function ParticleField() {
     }
   })
 
+  const particleColor = theme === "light" ? "#0f172a" : "#00ffff"
+
   return (
     <Points ref={ref} positions={positions} stride={3} frustumCulled={false}>
-      <PointMaterial transparent color="#00ffff" size={0.03} sizeAttenuation={true} depthWrite={false} />
+      <PointMaterial transparent color={particleColor} size={0.03} sizeAttenuation={true} depthWrite={false} />
     </Points>
   )
 }
 
 function CodeConstellation() {
   const ref = useRef<THREE.Group>(null)
+  const { theme } = useTheme()
+  const accentColor = theme === "light" ? "#7c3aed" : "#ff00ff"
 
   useFrame((state) => {
     if (ref.current) {
@@ -43,7 +49,7 @@ function CodeConstellation() {
       {Array.from({ length: 20 }).map((_, i) => (
         <mesh key={i} position={[(Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 10]}>
           <boxGeometry args={[0.05, 0.05, 0.05]} />
-          <meshBasicMaterial color="#ff00ff" transparent opacity={0.4} />
+          <meshBasicMaterial color={accentColor} transparent opacity={theme === "light" ? 0.8 : 0.4} />
         </mesh>
       ))}
     </group>

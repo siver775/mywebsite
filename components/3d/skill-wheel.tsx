@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Text, OrbitControls } from "@react-three/drei"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTheme } from "next-themes"
 import type * as THREE from "three"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -76,6 +77,9 @@ const skillsData = [
 
 function SkillOrb({ skill, onClick, isHovered }: any) {
   const meshRef = useRef<THREE.Mesh>(null)
+  const { theme } = useTheme()
+  const labelColor = theme === "light" ? "#0f172a" : "#ffffff"
+  const secondaryLabelColor = theme === "light" ? "#475569" : "#cbd5e1"
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -113,11 +117,11 @@ function SkillOrb({ skill, onClick, isHovered }: any) {
         />
       </mesh>
 
-      <Text position={[0, -size - 0.4, 0]} fontSize={0.2} color="white" anchorX="center" anchorY="middle">
+      <Text position={[0, -size - 0.4, 0]} fontSize={0.2} color={labelColor} anchorX="center" anchorY="middle">
         {skill.name}
       </Text>
 
-      <Text position={[0, -size - 0.6, 0]} fontSize={0.12} color="#888" anchorX="center" anchorY="middle">
+      <Text position={[0, -size - 0.6, 0]} fontSize={0.12} color={secondaryLabelColor} anchorX="center" anchorY="middle">
         {skill.level}%
       </Text>
     </group>
@@ -135,7 +139,7 @@ function FallbackSkillsGrid({ skills, onSkillClick }: any) {
           onClick={() => onSkillClick(skill)}
           className="cursor-pointer"
         >
-          <Card className="glass-morphism border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+          <Card className="glass-morphism border-border/50 hover:border-cyan-400/50 transition-all duration-300">
             <CardContent className="p-4 text-center">
               <div
                 className="w-16 h-16 rounded-full mx-auto mb-3 flex items-center justify-center text-2xl font-bold"
@@ -143,8 +147,8 @@ function FallbackSkillsGrid({ skills, onSkillClick }: any) {
               >
                 {skill.level}%
               </div>
-              <h3 className="text-white font-semibold mb-1">{skill.name}</h3>
-              <p className="text-white/60 text-sm">{skill.category}</p>
+              <h3 className="text-foreground font-semibold mb-1">{skill.name}</h3>
+              <p className="text-muted-foreground text-sm">{skill.category}</p>
             </CardContent>
           </Card>
         </motion.div>
@@ -219,27 +223,27 @@ export default function SkillWheel() {
             className="absolute bottom-4 left-4 right-4 glass-morphism rounded-lg p-6"
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-2xl font-bold text-white">{selectedSkill.name}</h3>
-              <button onClick={() => setSelectedSkill(null)} className="text-white/60 hover:text-white">
+              <h3 className="text-2xl font-bold text-foreground">{selectedSkill.name}</h3>
+              <button onClick={() => setSelectedSkill(null)} className="text-muted-foreground hover:text-foreground">
                 ✕
               </button>
             </div>
 
-            <div className="flex items-center gap-4 mb-4">
-              <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">{selectedSkill.category}</span>
+            <div className="flex items-center gap-4 mb-4 flex-wrap">
+              <span className="px-3 py-1 bg-muted rounded-full text-sm text-foreground">{selectedSkill.category}</span>
               <div className="flex items-center gap-2">
-                <div className="w-32 h-2 bg-white/20 rounded-full overflow-hidden">
+                <div className="w-32 h-2 bg-muted rounded-full overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${selectedSkill.level}%` }}
                     className="h-full bg-gradient-to-r from-cyan-400 to-purple-400"
                   />
                 </div>
-                <span className="text-white/80">{selectedSkill.level}%</span>
+                <span className="text-muted-foreground">{selectedSkill.level}%</span>
               </div>
             </div>
 
-            <p className="text-white/70">{selectedSkill.description}</p>
+            <p className="text-muted-foreground">{selectedSkill.description}</p>
           </motion.div>
         )}
       </AnimatePresence>

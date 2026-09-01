@@ -73,30 +73,30 @@ export default function InteractiveTimeline() {
                 onClick={() => setSelectedItem(selectedItem === item.id ? null : item.id)}
                 className="cursor-pointer"
               >
-                <Card className="glass-morphism border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                <Card className="glass-morphism border-border/50 hover:border-cyan-400/50 transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-2">
                       <Calendar className="h-4 w-4 text-cyan-400" />
                       <span className="text-cyan-400 font-semibold">{item.year}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
 
                     <div className="flex items-center gap-2 mb-3">
                       <Briefcase className="h-4 w-4 text-purple-400" />
-                      <span className="text-white/80">{item.company}</span>
+                      <span className="text-muted-foreground">{item.company}</span>
                     </div>
 
                     <div className="flex items-center gap-2 mb-4">
                       <MapPin className="h-4 w-4 text-green-400" />
-                      <span className="text-white/60">{item.location}</span>
+                      <span className="text-muted-foreground">{item.location}</span>
                     </div>
 
-                    <p className="text-white/70 mb-4">{item.description}</p>
+                    <p className="text-muted-foreground mb-4">{item.description}</p>
 
                     <div className="flex flex-wrap gap-2">
                       {item.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-white/10 text-white">
+                        <Badge key={tech} variant="secondary" className="bg-muted text-foreground">
                           {tech}
                         </Badge>
                       ))}
@@ -143,13 +143,13 @@ export default function InteractiveTimeline() {
 
                 return (
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                    <p className="text-white/80 mb-6">{item.description}</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">{item.title}</h3>
+                    <p className="text-muted-foreground mb-6">{item.description}</p>
 
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Achievements:</h4>
                     <ul className="space-y-2 mb-6">
                       {item.achievements.map((achievement, i) => (
-                        <li key={i} className="text-white/70 flex items-center">
+                        <li key={i} className="text-muted-foreground flex items-center">
                           <span className="w-2 h-2 bg-purple-400 rounded-full mr-3" />
                           {achievement}
                         </li>
@@ -158,7 +158,7 @@ export default function InteractiveTimeline() {
 
                     <div className="flex flex-wrap gap-2">
                       {item.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-white/10 text-white">
+                        <Badge key={tech} variant="secondary" className="bg-muted text-foreground">
                           {tech}
                         </Badge>
                       ))}
