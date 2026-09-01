@@ -4,6 +4,8 @@ import InteractiveTimeline from "@/components/interactive-timeline"
 import LiveGitHubWidget from "@/components/widgets/live-github-widget"
 import CurrentlyLearningWidget from "@/components/widgets/currently-learning-widget"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 relative">
@@ -52,7 +54,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            <img src="/contrib-heatmap.svg" alt="GitHub Contribution Heatmap" className="w-full h-auto rounded-lg" />
+            <img src={`${basePath}/contrib-heatmap.svg`} alt="GitHub Contribution Heatmap" className="w-full h-auto rounded-lg" />
           </motion.div>
         </div>
       </div>
