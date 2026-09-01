@@ -47,6 +47,13 @@ export default function AboutSection() {
           >
             <CurrentlyLearningWidget />
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+          >
+            <img src="/contrib-heatmap.svg" alt="GitHub Contribution Heatmap" className="w-full h-auto rounded-lg" />
+          </motion.div>
         </div>
       </div>
     </section>

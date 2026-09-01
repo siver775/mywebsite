@@ -176,12 +176,12 @@ export default function BlogSection() {
             </div>
 
             {/* GitHub Contribution Heatmap */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              <Card className="glass-morphism border-border/50">
+            > */}
+              {/* <Card className="glass-morphism border-border/50">
                 <CardHeader>
                   <CardTitle className="text-foreground flex items-center gap-2">📊 Contribution Activity</CardTitle>
                 </CardHeader>
@@ -204,8 +204,9 @@ export default function BlogSection() {
                   </div>
                   <p className="text-muted-foreground text-sm mt-4">930 contributions in the last year</p>
                 </CardContent>
-              </Card>
-            </motion.div>
+              </Card> */}
+              
+            {/* </motion.div> */}
           </div>
         </div>
       </div>
