@@ -12,6 +12,7 @@ name: Update GitHub contribution SVG
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   heatmap:
@@ -33,7 +34,14 @@ jobs:
         run: python scripts/render_heatmap_svg.py
 
       - name: Commit updated art
+        id: commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
+          commit_message: "chore: refresh contribution graph"
           file_pattern: "data/contributions.json public/contrib-heatmap.svg"
+
+      - name: Trigger Pages deployment
+        if: steps.commit.outputs.changes_detected == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run nextjs.yml --ref main
