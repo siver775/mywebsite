@@ -1,22 +1,22 @@
 {
   "username": "siver775",
-  "generated_at": "2026-10-10T04:15:12Z",
+  "generated_at": "2026-10-11T03:53:39Z",
   "range": {
-    "start": "2025-10-05",
-    "end": "2026-10-10"
+    "start": "2025-10-12",
+    "end": "2026-10-11"
   },
-  "total_contributions": 292,
-  "active_days": 162,
+  "total_contributions": 284,
+  "active_days": 158,
   "avg_per_active_day": 1.8,
   "current_streak": {
-    "length": 37,
+    "length": 38,
     "start": "2026-09-03",
-    "end": "2026-10-09"
+    "end": "2026-10-10"
   },
   "longest_streak": {
-    "length": 37,
+    "length": 38,
     "start": "2026-09-03",
-    "end": "2026-10-09"
+    "end": "2026-10-10"
   },
   "best_day": {
     "date": "2026-06-17",
@@ -25,7 +25,7 @@
   "monthly": [
     {
       "month": "2025-10",
-      "total": 27
+      "total": 18
     },
     {
       "month": "2025-11",
@@ -73,38 +73,10 @@
     },
     {
       "month": "2026-10",
-      "total": 9
+      "total": 10
     }
   ],
   "days": [
-    {
-      "date": "2025-10-05",
-      "count": 2
-    },
-    {
-      "date": "2025-10-06",
-      "count": 0
-    },
-    {
-      "date": "2025-10-07",
-      "count": 2
-    },
-    {
-      "date": "2025-10-08",
-      "count": 2
-    },
-    {
-      "date": "2025-10-09",
-      "count": 0
-    },
-    {
-      "date": "2025-10-10",
-      "count": 1
-    },
-    {
-      "date": "2025-10-11",
-      "count": 2
-    },
     {
       "date": "2025-10-12",
       "count": 1
@@ -1559,6 +1531,10 @@
     },
     {
       "date": "2026-10-10",
+      "count": 1
+    },
+    {
+      "date": "2026-10-11",
       "count": 0
     }
   ]
